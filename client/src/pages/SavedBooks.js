@@ -58,31 +58,29 @@ const SavedBooks = () => {
   const handleDeleteBook = async (bookId) => {
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
-
+  
     if (!token) {
       return false;
-    },
-
+    }
+  
     try {
       await removeBook({
         variables: { bookId },
-        update: cache => {
+        update: (cache) => {
           const data = cache.readQuery({ query: GET_ME });
           const userDataCache = data.me;
-          updatedUserCache = userDataCache.filter((book) => book.bookId !== bookId);
-          (book) => book.bookId !== bookId;
-          cache.writeQuery({ query: GET_ME, data: { me: updatedUserCache } });
+          const updatedUserCache = userDataCache.savedBooks.filter((book) => book.bookId !== bookId);
+          cache.writeQuery({ query: GET_ME, data: { me: { ...userDataCache, savedBooks: updatedUserCache } } });
         },
       });
-
-      // const updatedUser = await response.json();
-      setUserData(updatedUser);
+  
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
     }
   };
+  
 
   // if data isn't here yet, say so
   if (loading) {
