@@ -17,8 +17,9 @@ This app was created as a personal book search and wishlist manager. With this a
 
 To use this app, simply navigate to the website and start exploring an extensive library of books. Register for an account to save your favorite books to your personal wishlist. Feel free to interact with the app and make it your go-to companion for discovering and organizing your literary interests.
 
-![sample](assets/Screenshot.png)
-![alt text](assets/images/screenshot.png)
+![screenshot1](./client/public/images/screenshot1.png)
+
+![screenshot2](./client/public/images/screenshot2.png)
 
 ## Questions
 
