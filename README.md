@@ -15,7 +15,7 @@ This app was created as a personal book search and wishlist manager. With this a
 
 ## Usage
 
-To use this app, simply navigate to the website and start exploring an extensive library of books. Register for an account to save your favorite books to your personal wishlist. Feel free to interact with the app and make it your go-to companion for discovering and organizing your literary interests.
+To use this app, simply navigate to the website https://protected-badlands-23968-77a380b2dbc9.herokuapp.com/ and start exploring an extensive library of books. Register for an account to save your favorite books to your personal wishlist. Feel free to interact with the app and make it your go-to companion for discovering and organizing your literary interests.
 
 ![screenshot1](./client/public/images/screenshot1.png)
 
